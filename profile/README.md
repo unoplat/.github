@@ -4,7 +4,7 @@ This is team Spartans. We formed the team in late 2018. The product name is call
 
 ## Vision
 
-The vision of the unoplat is to bootstrap entire backend cloud native infrastructure. This in fact is going to be an open source alternative to Databricks lake house platform and is going to be a better one as the platform will be centred around Data Mesh empowering organizations in their data vision. 
+The vision of the unoplat is to bootstrap entire backend cloud native infrastructure. The backend infra also is going to be based out of fundamentals of data mesh where we look beyond data lake and warehouses. 
 
 ## Metrics of Success
 
