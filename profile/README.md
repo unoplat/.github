@@ -48,21 +48,20 @@ UnoPlatform is an opinionated platform in terms of its selection of tools and as
 * [Spotify Backstage](https://backstage.io)
 * [Shifting from Spreadsheets to Backstage](https://www.youtube.com/watch?v=lCgDiusuixM)
 * [Reproducible builds and deployments](https://nixos.org)
-* [Precommit CI/CD]
+* [Precommit CI/CD](https://tilt.dev/)
 * [Backstage Documentation](https://backstage.io/docs/overview/what-is-backstage)
 
 ## Impact on business/Organisation
 
 * Supercharged Development experience resulting in exponential reduction in time to value for shipping products/features and happy devs.
 
+### Uno App and Infra Fabric
 
-* Uno App and Infra Fabric
-
-## What is Uno App Fabric?
+#### What is Uno App and Infra Fabric?
 
 Uno App Fabric aims to create reusable software templates, empowering companies to launch features quickly without worrying about cross-cutting concerns in software development.
 
-## Why is it needed?
+#### Why is it needed?
 
 Today's tech landscape offers countless software frameworks, message brokers, databases, and monitoring tools. Choosing and managing these components can be overwhelming and requires specialized skills.
 
@@ -71,59 +70,35 @@ Cross-cutting concerns in software development include:
 1. High Availability - Ensuring continuous system uptime and minimizing service disruptions.
 2. Observability - Metrics, Logging, Alerting, Tracing, and Visualization
 3. Scalability - Adapting system capacity to handle increasing workloads efficiently.
-4. Fault tolerance - Resilient to failures, Exactly-once semantics
-5. DevSecOps: Integrates development, security, and operations practices to enhance collaboration, automation, and vulnerability detection, streamlining software development and ensuring rapid, secure, and reliable delivery.
-6. Framework selection as per use case
-7. Base Project Structure
-8. Base Documentation Structure
+4. Fault tolerance - Resilient to failures, Exactly-once semantics wherever applicable.
+5. DevSecOps: Integrates development, security, and operations practices to close feeback loop as early as possible.
 
-## How do we solve this through Uno App and Infra Fabric?
+#### How do organizations approach App and Infra Software Template process?
 
-Software development can be templatized based on Directed Acyclic Graphs (DAG) with single/multiple sources and single/multiple sinks, along with stateful/stateless pluggable business logic data processor nodes in between.
+Before arriving at the solution, it is essential to understand the different categories of software for developing any backend cloud-native feature:
 
-Uno App and Infra Fabric addresses cross-cutting concerns by providing software templates preloaded with features such as MDC-based logging, observability, reactive scaling, high availability, DevSecOps, operator-driven 3rd-party components, service mesh for East-West traffic, unit test templates, and BDD test templates.
+* **Stateful Applications** - Applications that require state to maintain (e.g., Message Brokers, Databases, Stateful Streaming/Batch Apache Flink).
+* **Stateless Application** -  Services that don't require state to maintain. For Example - Spring boot/Quarkus based microservices.
+* **Operators** - Simplify administration of stateful applications.
+* **BPMN-based Applications** - Require state maintenance after every step of a process (e.g., Camunda, Nuss Knacker, Netflix Conductor).
 
-## How does UNOPLAT solve this problem?
+Two examples illustrate the concept of software templates:
 
-UnoPlat app fabric software templates are based on:
+1. In a library management system, let us have a look at inventory feature. A microservice template with an HTTP POST endpoint as the source and a SQL DB as the sink, along with pluggable business logic, can be used for inserting book data.
 
-* Popular DBs - Scylla (NoSql), MongoDB (NoSql), PostgreSQL (Sql), CockroachDB (Distributed Db)
-* Message Brokers - Redpanda (Message Broker)
-* Micro-service templates based on Quarkus
-* Streaming/Batch Stateful/Stateless templates based on Apache Flink
-* Observability framework based on SigNoz
-* Reactive Scalable framework based on KEDA
-* User-facing analytics based on Apache Pinot
-* Pre-commit DevSecOps based on Tilt
-* Post-commit DevSecOps based on GitHub Actions
-* Service mesh based on Istio
+2. For calculating the average pollution in a city over 24 hours, sensors provide data through a message broker. A streaming tumbling stateful service template with a message broker topic as both the source and sink, along with pluggable stateful business logic, can be used to compute the average.
 
-## Examples
+To address cross-cutting concerns of any application, the template should include default features such as:
 
-### Library Management System
+* MDC-based Logging
+* Observability
+* Reactive Scaling
+* High Availability
+* DevSecOps
+* Operator-driven 3p components
+* Service Mesh
+* Unit Tests
+* BDD Tests
 
-A library management system requires a REST API to insert book data. By using a micro-service template with an HTTP POST endpoint as the source and a SQL database as the sink, the required functionality can be achieved.
+Software development can be templatized using Directed Acyclic Graphs (DAG) with single/multiple sources and sinks, and stateful/stateless pluggable business logic data processor nodes. By applying the DAG-based approach, developers can create reusable software templates that address a wide range of use cases, streamline development, and improve efficiency.
 
-### Average Pollution Calculation
-
-For calculating the average pollution in a city over 24 hours, data from sensors is collected and made available through a message broker. A stateful streaming template with a tumbling window is used to consume data, perform calculations, and publish results to an output topic.
-
-## Conclusion
-
-Uno App and Infra Fabric's software templates can address any single/multiple source and sink problems by allowing developers to plug in their business logic and data processing components into a standardized, reusable structure. This approach significantly reduces the time and effort required to develop new features or products, ultimately leading to increased efficiency and productivity.
-
-
-
-
-
-
-
-
-
-
-
-
-
-* Seamless collaboration with multiple devs across multiple product teams.
-* Happier Devs resulting in lesser attrition.
-* Exponential reduction in operating cost in using multiple tools to keep track of the project.
