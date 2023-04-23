@@ -1,104 +1,129 @@
-# Hello World!
+# Table of Contents
 
-We formed the team in late 2018. The objective was to platformize components across multiple product lines.
+1. [What is UnoPlat](#what-is-unoplat)
+2. [Current state of Data Platforms](#current-state-of-data-platforms)
+3. [Why UnoPlat](#why-unoplat)
+4. [UnoPlat Composition](#unoplat-composition)
+5. [UnoPlat Workflow](#unoplat-workflow)
+6. [UnoPlat - Sample Implementation: DataPlatform - Ride Hailing Apps](#unoplat-sample-implementation)
+7. [About Us](#about-us)
 
-## Vision
+## What is UnoPlat
 
-The goal is to take all of the learnings we have had and bootstrap Cloud native Data platform. We call this platform UNOPLAT.AI .
+UnoPlat, a cutting-edge datamesh inspired data platform designed to revolutionize the way businesses access, manage, and derive value from their data. As a comprehensive and innovative solution, UnoPlat is perfectly positioned to become a key platform, helping you enhance your data-driven offerings and services.
 
-## Metrics of Success
+At a high level, UnoPlat is a data platform that offers:
 
-* Time to Value for any feature/product
-* To enable data driven use cases by at least an order of magnitude faster through uno data mesh.
-* Reduce Operating Cost by at least an order of magnitude.
-* Developer Experience
+- Domain-oriented architecture: UnoPlat enables decentralized data ownership, allowing businesses to scale out their data ecosystem while maintaining autonomy and control over their domain-specific data.
+- Data as a product: Our platform emphasizes treating data as a valuable product, ensuring easy discoverability, secure access, and high-quality data that can be consumed and utilized seamlessly across the organization.
+- Self-serve infrastructure: UnoPlat empowers domain teams to create and consume data products autonomously through a user-friendly, self-serve data infrastructure. This dramatically reduces the complexity associated with building, executing, and maintaining data products.
+- Federated computational governance: Our platform facilitates interoperability between independent data products while respecting domain autonomy. UnoPlat's governance model supports adherence to global standards and ensures a healthy, interconnected data ecosystem.
 
-## Approach
+## Current state of Data Platforms
 
-Based on the metrics of success, we had to build the foundation for any cloud-native product in any domain. We call this foundation Unoplat.ai.
-After multiple case studies and developing backend infra/services for various engineering leaders, we arrived at these cross-cutting concerns:
+Current data platforms face several challenges that limit their effectiveness in meeting the demands of today's data-driven organizations. Key pain points include:
 
-1. Uno Developer Joy
-2. Uno App and Infra Fabric
-3. Uno Data Mesh
-4. Uno MLOps
+- Engineering: Traditional platforms often rely on closed looped architectures, making them difficult to scale and adapt to new data sources or use cases. This leads to increased complexity, technical debt, and cost. As none of these platforms are open source, vendor lock-in and maintenance nightmares often cripple the project.
+- Management: Centralized data management based on data warehouse and lakes approaches result in bottlenecks, slowing down decision-making and hindering cross-domain collaboration. This stifles innovation and limits the potential for data-driven insights.
+- Cost of Production, Creation, and Maintenance: Legacy data platforms require significant upfront investment and ongoing maintenance costs. These platforms can be resource-intensive and difficult to maintain, driving up overall costs.
+- Time to Value: The rigid nature of traditional platforms can delay the time it takes to derive value from data. This impacts an organization's ability to make timely, informed decisions and capitalize on opportunities.
+- Data Freshness and Collaboration: Conventional data platforms struggle to accommodate the demand for real-time data and seamless data sharing. This hampers organizations from leveraging the full potential of their data assets for better decision-making.
+- Data Democracy: Traditional data platforms can hinder data access and democratization, restricting the ability of employees at all levels to make data-driven decisions. Often, collaboration is done on data through a separate tool compared to the one where the data is available, which makes the discussion disconnected and auto-discovery of data difficult.
 
-### Uno Developer Joy
+The shortcomings of existing data platforms make them ill-suited for modern data-driven organizations that require agility, scalability, and collaboration. UnoPlat addresses these challenges, offering a more efficient and adaptable solution for today's data-intensive businesses.
 
-#### What is Developer joy?
 
-Developer joy stems from keeping developers happy and productive by shielding them from daily chaos, inspired by Spotify's backstage insights. It addresses pain points like unnecessary cognitive load from interacting with multiple tools and slow feedback loops.
+## Why UnoPlat
 
-#### Why is it needed?
+Moving to UnoPlat offers several advantages to data-driven organizations, providing a more efficient and flexible solution than conventional data platforms. Key benefits include:
 
-Developers face many day-to-day operations, such as figuring out best frameworks for the task assigned, version control, devsecops, IAM, monitoring tools, etc. Navigating multiple portals creates cognitive load, hindering productivity and creativity. Feedback loops for commit quality are slow, impacting product timelines.
+- **Architecture**: UnoPlat embraces a modern, domain-oriented decentralized architecture, allowing for better scalability and adaptability to changing business requirements. This ensures that organizations can easily grow and evolve without being held back by rigid data platform limitations.
+- **Ease of Adoption**: UnoPlat is designed with a self-serve data infrastructure in mind, enabling teams to quickly onboard and start using the platform. This reduces friction and accelerates time-to-value for organizations transitioning to a new data platform.
+- **Ease of Data Generation**: With its data-as-a-product approach, UnoPlat simplifies the process of generating high-quality data products. Teams can focus on delivering valuable data assets that are easy to discover, understand, and use securely by others in the organization.
+- **Ease of Maintenance**: UnoPlat's emphasis on automation and self-service capabilities reduces the burden of maintaining complex data pipelines and infrastructure. This allows organizations to allocate resources more efficiently and focus on core business objectives.
+- **Ease of Collaboration**: UnoPlat's federated computational governance model promotes cross-domain collaboration, enabling teams to work together seamlessly and derive more value from aggregated and correlated data. This fosters a culture of data-driven decision-making and innovation.
+- **Developer Joy**: UnoPlat's modern architecture, self-service capabilities, and focus on automation lead to a more enjoyable development experience for engineers. This increases productivity and job satisfaction while attracting and retaining top talent in the organization.
+- **Open Source**: Unoplat is based on Apache License 2.0 due to key advantages: community involvement, transparency, lower costs, flexibility and customization, interoperability, vendor independence, rapid innovation, positive network effects, and educational value. These factors contribute to accelerated development, increased trust, cost-effectiveness, customization freedom, seamless integration, reduced reliance on single vendors, faster innovation, continuous growth, and learning opportunities.
 
-#### How teams could achieve Developer Joy?
+Adopting UnoPlat provides data organizations with a more flexible, scalable, and collaborative solution than traditional data platforms. By addressing the pain points of legacy systems, UnoPlat enables organizations to unlock the full potential of their data assets and drive better decision-making and innovation.
 
-By adopting a Kubernetes-like approach for developers, providing a single interface with reusable code, devsecops, monitoring, alerting, infra, and docs. Implementing precommit CI/CD ensures instant feedback on code quality, security, and tests before committing.
+## UnoPlat Composition
 
-#### How does **UNOPLAT** solve this problem?
+UnoPlat, with its cloud-native foundation, focuses on extensibility, configurability, and embracing the core principles of Data Mesh. By leveraging a combination of open-source tools and technologies, UnoPlat offers a flexible and customizable data platform solution that aligns with the rapidly changing distributed systems landscape.
 
-UnoPlatform is an opinionated platform in terms of its selection of tools and as of now the platform relies on:
-1.  **Spotify Backstage.** - Single pane of glass for devs.
-2.  **tilt** - Precommit CI/CD
-3. **Unoplat Cli**  - To Interact with Unoplat ecosystem
+At its core, UnoPlat utilizes Kubernetes as the orchestration medium, deploying a fleet of toolkits that enable the creation and management of a Data Mesh. The backend toolkit of UnoPlat is highly configurable, allowing organizations to choose from an extensive catalog of options to build their ideal data platform.
 
-#### References:
-* [Spotify Backstage](https://backstage.io)
-* [Shifting from Spreadsheets to Backstage](https://www.youtube.com/watch?v=lCgDiusuixM)
-* [Reproducible builds and deployments](https://nixos.org)
-* [Precommit CI/CD](https://tilt.dev/)
-* [Backstage Documentation](https://backstage.io/docs/overview/what-is-backstage)
+A preferred backend catalog configuration for UnoPlat includes:
 
-## Impact on business/Organisation
+1. Compute Infrastructure: [CIVO Kubernetes](https://www.civo.com/kubernetes)
+2. IaC ToolChain: [Pulumi](https://www.pulumi.com/)
+3. Message Broker Infrastructure: [Redpanda](https://vectorized.io/redpanda/), [Apache Kafka - Strimzi Operator](https://strimzi.io/)
+4. Microservice Framework: [Quarkus JVM/Native](https://quarkus.io/)
+5. Serverless Framework: [Knative](https://knative.dev/)
+6. BPMN Frameworks: [Netflix Conductor](https://netflix.github.io/conductor/), [Nussknacker](https://nussknacker.io/)
+7. Streaming & Batch Infrastructure: [Apache Flink](https://flink.apache.org/)
+8. NoSQL Storage Infrastructure: [MongoDB](https://www.mongodb.com/), [Cassandra](https://cassandra.apache.org/), [Scylla](https://www.scylladb.com/)
+9. SQL Storage Infrastructure: [PostgreSQL](https://www.postgresql.org/), [CockroachDB](https://www.cockroachlabs.com/)
+10. Observability: [Prometheus Operator/Grafana](https://github.com/prometheus-operator/prometheus-operator), [Signoz](https://signoz.io/) ([OpenTelemetry](https://opentelemetry.io/))
+11. Feature Engineering Infra: [Feast](https://feast.dev/)
+12. GitOps Infra: [GitHub Actions](https://github.com/features/actions)
+13. Deployment & Reconciler Infra: [FluxCD](https://fluxcd.io/)
+14. Developer Experience ToolChain: [VSCode](https://code.visualstudio.com/), [Tilt(Precommit CI/CD)](https://tilt.dev/), [MkDocs](https://www.mkdocs.org/), [Mermaid](https://mermaid-js.github.io/mermaid/)
+15. Developer Portal Infrastructure: [Spotify Backstage](https://backstage.io/)
+16. Data Discovery Infrastructure: [OpenMetadata](https://www.openmetadata.org/)
+17. Data Quality Check Infrastructure: [Great Expectations](https://greatexpectations.io/)
+18. Compliance Infrastructure: Policies as Code - [OPA](https://www.openpolicyagent.org/)
+19. Software Supply Chain Compliance: [SLSA](https://slsa.dev/)
+20. Performance Engineering: [k6](https://k6.io/)
+21. Chaos Engineering: Future (Yet to be decided)
+22. Service Mesh Infrastructure: [Istio](https://istio.io/), [Consul](https://www.consul.io/)
+23. User Facing Analytics - [Apache pinot](https://pinot.apache.org/)
 
-* Supercharged Development experience resulting in exponential reduction in time to value for shipping products/features and happy devs.
+*Note: The above set of open source tools/frameworks is subjected to change based on market demand and community feedback.*
 
-### Uno App and Infra Fabric
+By composing this optimal set of open-source tools and technologies, UnoPlat empowers organisations to  build and maintain a modern, scalable, and highly configurable Data Mesh. This flexibility ensures that UnoPlat remains relevant and adaptable to the ever-evolving demands of data-driven organizations.
 
-#### What is Uno App and Infra Fabric?
+## UnoPlat Workflow
 
-Uno App Fabric aims to create reusable software templates, empowering companies to launch features quickly without worrying about cross-cutting concerns in software development.
+UnoPlat's objective is to optimize the data engineering workflow from the initial data demand request to its fulfillment. By leveraging the various toolkits in the backend catalog, UnoPlat simplifies each stage of the workflow. Here's a brief overview of how UnoPlat streamlines the data engineering workflow:
 
-#### Why is it needed?
+### Data Consumption
+For stateful workflows using streaming and batch processing tools like Apache Flink and Apache Kafka/Redpanda, UnoPlat enables seamless data consumption from various data sources while ensuring data consistency and fault tolerance. For Stateless workflows, consumers of UnoPlat can also use Knative for serverless and Quarkus for microservice use cases apart from Flink.
 
-Today's tech landscape offers countless software frameworks, message brokers, databases, and monitoring tools. Choosing and managing these components can be overwhelming and requires specialized skills.
+### Data Source Identification
+UnoPlat uses the metadata cataloging tools like OpenMetadata to manage data sources and their respective schemas. This allows teams to easily discover and identify relevant data sources for their use cases.
 
-Cross-cutting concerns in software development include:
+### Data Cleansing
+UnoPlat leverages data quality tools like Great Expectations (integrated with OpenMetadata) to perform data cleansing tasks, such as data validation, deduplication, and data type conversion, ensuring that the data is accurate, consistent, and reliable.
 
-1. High Availability - Ensuring continuous system uptime and minimizing service disruptions.
-2. Observability - Metrics, Logging, Alerting, Tracing, and Visualization
-3. Scalability - Adapting system capacity to handle increasing workloads efficiently.
-4. Fault tolerance - Resilient to failures, Exactly-once semantics wherever applicable.
-5. DevSecOps: Integrates development, security, and operations practices to close feeback loop as early as possible.
+### Metadata Cataloging
+UnoPlat utilizes OpenMetadata for metadata cataloging, enabling teams to discover, understand, and collaborate on data assets. This ensures that data remains up-to-date, well-documented, and easily accessible.
 
-#### How do organizations approach App and Infra Software Template process?
+### Data Query
+Parallel Data Query Python SDKs would be developed based on storage mechanism. This is to ease doing rapid PoCs/MLOps around datasets of choice selected through OpenMetadata.
 
-Before arriving at the solution, it is essential to understand the different categories of software for developing any backend cloud-native feature:
+### Data Versioning, Lineage, and Cataloging
+UnoPlat utilizes OpenMetadata for metadata cataloging, data versioning, data lineage, and data discovery. This enables teams to discover, understand, and collaborate on data assets while managing changes to data over time. With OpenMetadata, data remains up-to-date, well-documented, and easily accessible, and it allows for efficient data rollback, historical data analysis, and data lineage tracking.
 
-* **Stateful Applications** - Applications that require state to maintain (e.g., Message Brokers, Databases, Stateful Streaming/Batch Apache Flink).
-* **Stateless Application** -  Services that don't require state to maintain. For Example - Spring boot/Quarkus based microservices.
-* **Operators** - Simplify administration of stateful applications.
-* **BPMN-based Applications** - Require state maintenance after every step of a process (e.g., Camunda, Nuss Knacker, Netflix Conductor).
+### Data Products Publishing
+By leveraging the self-serve data infrastructure and the platform's built-in observability, UnoPlat ensures that published data products are secure, reliable, and scalable. Data products can be accessed and consumed by various teams across the organization, promoting data democratization and collaboration.
 
-Two examples illustrate the concept of software templates:
+UnoPlat optimizes the data engineering workflow by simplifying each stage and enabling seamless collaboration, leading to faster time-to-value and more effective data-driven decision-making.
 
-1. In a library management system, let us have a look at inventory feature. A microservice template with an HTTP POST endpoint as the source and a SQL DB as the sink, along with pluggable business logic, can be used for inserting book data.
+## Reference Implementation - UnoPlat for Ride-Hailing Apps
 
-2. For calculating the average pollution in a city over 24 hours, sensors provide data through a message broker. A streaming tumbling stateful service template with a message broker topic as both the source and sink, along with pluggable stateful business logic, can be used to compute the average.
+To create a domain-driven data platform for a fictional ride-hailing company using UnoPlat, we will first identify the key domains and then design data products to support those domains. Here's a high-level overview of the data platform architecture for this company on UnoPlat.
 
-To address cross-cutting concerns of any application, the template should include default features such as:
+### Key Domains:
+1. **Customer Domain**: Manages customer profiles, preferences, and ride history.
+2. **Driver Domain**: Manages driver profiles, vehicle details, and driver availability.
+3. **Ride Domain**: Manages ride requests, matching, ride status, and payments.
+4. **Pricing Domain**: Manages dynamic pricing, promotions, and discounts.
+5. **Location Domain**: Manages location tracking and geolocation data for drivers and customers.
 
-* MDC-based Logging
-* Observability
-* Reactive Scaling
-* High Availability
-* DevSecOps
-* Operator-driven 3p components
-* Service Mesh
-* Unit Tests
-* BDD Tests
-
-Software development can be templatized using Directed Acyclic Graphs (DAG) with single/multiple sources and sinks, and stateful/stateless pluggable business logic data processor nodes. By applying the DAG-based approach, developers can create reusable software templates that address a wide range of use cases, streamline development, and improve efficiency.
-
+### Data Products:
+1. **Customer Data Product**: Contains customer-related data such as demographics, preferences, and ride history. This data product can be used for personalized marketing, customer segmentation, and churn prediction.
+2. **Driver Data Product**: Contains driver-related data such as driver profile, vehicle details, ratings, and availability. This data product can be used for driver recruitment, retention strategies, and driver performance analysis.
+3. **Ride Data Product**: Contains ride-related data such as ride requests, ride status, ride duration, distance, and payments. This data product can be used for ride pattern analysis, demand forecasting, and revenue optimization.
+4. **Pricing Data Product**: Contains pricing-related data such as dynamic pricing, promotions, and discounts. This data product can be used for pricing strategy, revenue management, and promotional analysis.
+5. **Location Data Product**: Contains location-related data such as driver and customer geolocation, route optimization, and traffic data. This data product can be used for route optimization, location-based marketing, and traffic pattern analysis.
