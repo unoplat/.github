@@ -56,8 +56,19 @@ Adopting UnoPlat provides data organizations with a more flexible, scalable, and
 
 UnoPlat, with its cloud-native foundation, focuses on extensibility, configurability, and embracing the core principles of Data Mesh. By leveraging a combination of open-source tools and technologies, UnoPlat offers a flexible and customizable data platform solution that aligns with the rapidly changing distributed systems landscape.
 
-At its core, UnoPlat utilizes Kubernetes as the orchestration medium, deploying a fleet of toolkits that enable the creation and management of a Data Mesh. The backend toolkit of UnoPlat is highly configurable, allowing organizations to choose from an extensive catalog of options to build their ideal data platform.
+At its core, UnoPlat utilizes Kubernetes as the orchestration medium, deploying a fleet of toolkits that enable the creation and management of a Data Mesh. 
+UnoPlat is composed of a collection of planes as show in fig:
+![unoplat-composition](https://user-images.githubusercontent.com/17126168/234077800-383349b5-b6e7-4200-9dfe-14d0a5d5c7a2.png)
 
+- **Infrastructure Plane**: Manages the data infrastructure using tools like Kubernetes, IaC, Apache Flink, PostgreSQL, MongoDB, ScyllaDB, Strimzi Kafka Operator, Apache Kafka, and Redpanda.
+- **Networking & Policy Plane**: Handles networking, authorization, and data access using Open Policy Agent (OPA), Consul (Service Mesh), and KrakenD (API Gateway).
+- **Monitoring Plane**: Facilitates logging, tracing, and monitoring through Signoz, Prometheus Operator, and Grafana Operator.
+- **Developer Plane**: Focuses on developer joy, quick feedback, and seamless development using tools like GitHub Actions, FluxCD, Spotify Backstage, k6, Great Expectations, and OpenMetadata.
+- **Administration Plane**: Provides a Kubernetes-native architecture for administration, using UnoPlat API Server as a singular API interface to interact with the various planes and their toolchains.
+- **Generative Plane**: Offers two interactive modes - UnoPlat CLI for API server capabilities and a natural language-based UnoPlat prompt for easier administration, management, operations, and development.
+Together, these planes create a robust, scalable, and developer-friendly data platform that simplifies data management, collaboration, and orchestration.
+
+The backend toolkit of UnoPlat is highly configurable, allowing organizations to choose from an extensive catalog of options to build their ideal data platform.
 A preferred backend catalog configuration for UnoPlat includes:
 
 1. Compute Infrastructure: [CIVO Kubernetes](https://www.civo.com/kubernetes)
