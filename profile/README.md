@@ -24,6 +24,8 @@ At a high level, UnoPlat is a data platform that offers:
 - Self-serve infrastructure: UnoPlat empowers domain teams to create and consume data products autonomously through a user-friendly, self-serve data infrastructure. This dramatically reduces the complexity associated with building, executing, and maintaining data products.
 - Federated computational governance: Our platform facilitates interoperability between independent data products while respecting domain autonomy. UnoPlat's governance model supports adherence to global standards and ensures a healthy, interconnected data ecosystem.
 
+![unoplat-raw-definition](https://user-images.githubusercontent.com/17126168/235366511-5f2fad01-9873-45e5-b80e-07b9aed4d23f.png)
+
 ## Current state of Data Platforms
 
 Current data platforms face several challenges that limit their effectiveness in meeting the demands of today's data-driven organizations. Key pain points include:
@@ -51,6 +53,8 @@ Moving to UnoPlat offers several advantages to data-driven organizations, provid
 - **Open Source**: Unoplat is based on Apache License 2.0 due to key advantages: community involvement, transparency, lower costs, flexibility and customization, interoperability, vendor independence, rapid innovation, positive network effects, and educational value. These factors contribute to accelerated development, increased trust, cost-effectiveness, customization freedom, seamless integration, reduced reliance on single vendors, faster innovation, continuous growth, and learning opportunities.
 
 Adopting UnoPlat provides data organizations with a more flexible, scalable, and collaborative solution than traditional data platforms. By addressing the pain points of legacy systems, UnoPlat enables organizations to unlock the full potential of their data assets and drive better decision-making and innovation.
+
+![unoplat-mission](https://user-images.githubusercontent.com/17126168/235366554-a649f7b8-b470-4dc7-8a07-28fee05f97ce.png)
 
 ## UnoPlat Composition
 
