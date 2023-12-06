@@ -5,13 +5,32 @@
 
 # Table of Contents
 
-1. [What is UnoPlat](#what-is-unoplat)
+1. [Why UnoPlat](#why-unoplat)
 2. [Current state of Data Platforms](#current-state-of-data-platforms)
-3. [Why UnoPlat](#why-unoplat)
+3. [What is UnoPlat](#what-is-unoplat)
 4. [UnoPlat Composition](#unoplat-composition)
 5. [UnoPlat Workflow](#unoplat-workflow)
 6. [UnoPlat - Sample Implementation: DataPlatform - Ride Hailing Apps](#unoplat-sample-implementation)
 7. [About Us](#about-us)
+
+
+## Why UnoPlat
+
+![Unoplat_Vision](https://github.com/unoplat/.github/assets/24807277/4f5af199-19bc-434f-b8a0-637e7c7209d2)
+
+Moving to UnoPlat offers several advantages to data-driven organizations, providing a more efficient and flexible solution than conventional data platforms. Key benefits include:
+
+- **Architecture**: UnoPlat embraces a modern, domain-oriented decentralized architecture, allowing for better scalability and adaptability to changing business requirements. This ensures that organizations can easily grow and evolve without being held back by rigid data platform limitations.
+- **Ease of Adoption**: UnoPlat is designed with a self-serve data infrastructure in mind, enabling teams to quickly onboard and start using the platform. This reduces friction and accelerates time-to-value for organizations transitioning to a new data platform.
+- **Ease of Data Generation**: With its data-as-a-product approach, UnoPlat simplifies the process of generating high-quality data products. Teams can focus on delivering valuable data assets that are easy to discover, understand, and use securely by others in the organization.
+- **Ease of Maintenance**: UnoPlat's emphasis on automation and self-service capabilities reduces the burden of maintaining complex data pipelines and infrastructure. This allows organizations to allocate resources more efficiently and focus on core business objectives.
+- **Ease of Collaboration**: UnoPlat's federated computational governance model promotes cross-domain collaboration, enabling teams to work together seamlessly and derive more value from aggregated and correlated data. This fosters a culture of data-driven decision-making and innovation.
+- **Developer Joy**: UnoPlat's modern architecture, self-service capabilities, and focus on automation lead to a more enjoyable development experience for engineers. This increases productivity and job satisfaction while attracting and retaining top talent in the organization.
+- **Open Source**: Unoplat is based on Apache License 2.0 due to key advantages: community involvement, transparency, lower costs, flexibility and customization, interoperability, vendor independence, rapid innovation, positive network effects, and educational value. These factors contribute to accelerated development, increased trust, cost-effectiveness, customization freedom, seamless integration, reduced reliance on single vendors, faster innovation, continuous growth, and learning opportunities.
+
+Adopting UnoPlat provides data organizations with a more flexible, scalable, and collaborative solution than traditional data platforms. By addressing the pain points of legacy systems, UnoPlat enables organizations to unlock the full potential of their data assets and drive better decision-making and innovation.
+
+![unoplat-mission](https://user-images.githubusercontent.com/17126168/235366554-a649f7b8-b470-4dc7-8a07-28fee05f97ce.png)
 
 ## What is UnoPlat
 
@@ -40,21 +59,7 @@ Current data platforms face several challenges that limit their effectiveness in
 The shortcomings of existing data platforms make them ill-suited for modern data-driven organizations that require agility, scalability, and collaboration. UnoPlat addresses these challenges, offering a more efficient and adaptable solution for today's data-intensive businesses.
 
 
-## Why UnoPlat
 
-Moving to UnoPlat offers several advantages to data-driven organizations, providing a more efficient and flexible solution than conventional data platforms. Key benefits include:
-
-- **Architecture**: UnoPlat embraces a modern, domain-oriented decentralized architecture, allowing for better scalability and adaptability to changing business requirements. This ensures that organizations can easily grow and evolve without being held back by rigid data platform limitations.
-- **Ease of Adoption**: UnoPlat is designed with a self-serve data infrastructure in mind, enabling teams to quickly onboard and start using the platform. This reduces friction and accelerates time-to-value for organizations transitioning to a new data platform.
-- **Ease of Data Generation**: With its data-as-a-product approach, UnoPlat simplifies the process of generating high-quality data products. Teams can focus on delivering valuable data assets that are easy to discover, understand, and use securely by others in the organization.
-- **Ease of Maintenance**: UnoPlat's emphasis on automation and self-service capabilities reduces the burden of maintaining complex data pipelines and infrastructure. This allows organizations to allocate resources more efficiently and focus on core business objectives.
-- **Ease of Collaboration**: UnoPlat's federated computational governance model promotes cross-domain collaboration, enabling teams to work together seamlessly and derive more value from aggregated and correlated data. This fosters a culture of data-driven decision-making and innovation.
-- **Developer Joy**: UnoPlat's modern architecture, self-service capabilities, and focus on automation lead to a more enjoyable development experience for engineers. This increases productivity and job satisfaction while attracting and retaining top talent in the organization.
-- **Open Source**: Unoplat is based on Apache License 2.0 due to key advantages: community involvement, transparency, lower costs, flexibility and customization, interoperability, vendor independence, rapid innovation, positive network effects, and educational value. These factors contribute to accelerated development, increased trust, cost-effectiveness, customization freedom, seamless integration, reduced reliance on single vendors, faster innovation, continuous growth, and learning opportunities.
-
-Adopting UnoPlat provides data organizations with a more flexible, scalable, and collaborative solution than traditional data platforms. By addressing the pain points of legacy systems, UnoPlat enables organizations to unlock the full potential of their data assets and drive better decision-making and innovation.
-
-![unoplat-mission](https://user-images.githubusercontent.com/17126168/235366554-a649f7b8-b470-4dc7-8a07-28fee05f97ce.png)
 
 ## UnoPlat Composition
 
