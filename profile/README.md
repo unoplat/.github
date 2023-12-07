@@ -14,7 +14,7 @@
 7. [About Us](#about-us)
 
 
-## Why UnoPlat
+## Why UnoPlat (WHY)
 
 ![Unoplat_Vision](https://github.com/unoplat/.github/assets/24807277/4f5af199-19bc-434f-b8a0-637e7c7209d2)
 
@@ -32,7 +32,7 @@ Adopting UnoPlat provides data organizations with a more flexible, scalable, and
 
 ![unoplat-mission](https://user-images.githubusercontent.com/17126168/235366554-a649f7b8-b470-4dc7-8a07-28fee05f97ce.png)
 
-## What is UnoPlat
+## What is UnoPlat (WHAT)
 
 UnoPlat, a cutting-edge datamesh inspired data platform designed to revolutionize the way businesses access, manage, and derive value from their data. As a comprehensive and innovative solution, UnoPlat is perfectly positioned to become a key platform, helping you enhance your data-driven offerings and services.
 
@@ -61,7 +61,7 @@ The shortcomings of existing data platforms make them ill-suited for modern data
 
 
 
-## UnoPlat Composition
+## UnoPlat Composition (HOW)
 
 UnoPlat, with its cloud-native foundation, focuses on extensibility, configurability, and embracing the core principles of Data Mesh. By leveraging a combination of open-source tools and technologies, UnoPlat offers a flexible and customizable data platform solution that aligns with the rapidly changing distributed systems landscape.
 
@@ -103,6 +103,9 @@ A preferred backend catalog configuration for UnoPlat includes:
 21. Chaos Engineering: Future (Yet to be decided)
 22. Service Mesh Infrastructure: [Linkerd](https://linkerd.io/)
 23. User Facing Analytics - [Apache pinot](https://pinot.apache.org/)
+24. Backup and migrate Kubernetes resources and persistent volumes - [Velero](https://velero.io/)
+25. Autoscaling Framework - [KEDA](https://keda.sh/)
+26. Private Cloud Registry with Notary for Container Images - [HARBOR](https://goharbor.io/)
 
 *Note: The above set of open source tools/frameworks is subjected to change based on market demand and community feedback.*
 
