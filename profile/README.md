@@ -69,12 +69,12 @@ At its core, UnoPlat utilizes Kubernetes as the orchestration medium, deploying 
 UnoPlat is composed of a collection of planes as show in fig:
 ![unoplat-composition](https://user-images.githubusercontent.com/17126168/234077800-383349b5-b6e7-4200-9dfe-14d0a5d5c7a2.png)
 
-- **Infrastructure Plane**: Manages the data infrastructure using tools like Kubernetes, IaC, Apache Flink, PostgreSQL, MongoDB, ScyllaDB, Strimzi Kafka Operator, Apache Kafka, and Redpanda.
-- **Networking & Policy Plane**: Handles networking, authorization, and data access using Open Policy Agent (OPA), Consul (Service Mesh), and KrakenD (API Gateway).
-- **Monitoring Plane**: Facilitates logging, tracing, and monitoring through Signoz, Prometheus Operator, and Grafana Operator.
-- **Developer Plane**: Focuses on developer joy, quick feedback, and seamless development using tools like GitHub Actions, FluxCD, Spotify Backstage, k6, Great Expectations, and OpenMetadata.
-- **Administration Plane**: Provides a Kubernetes-native architecture for administration, using UnoPlat API Server as a singular API interface to interact with the various planes and their toolchains.
-- **Generative Plane**: Offers two interactive modes - UnoPlat CLI for API server capabilities and a natural language-based UnoPlat prompt for easier administration, management, operations, and development.
+- **Infrastructure Plane**: Manages the data infrastructure using tools like Kubernetes, IaC, Apache Flink Operator, PostgreSQL Operator, ScyllaDB Operator, K6 operator.
+- **Networking & Policy Plane**: Handles networking, authorization, and data access using Open Policy Agent (OPA), Linkerd (Service Mesh), and Emissary (API Gateway).
+- **Monitoring Plane**: Facilitates logging, tracing, and monitoring through Signoz, Kube-Prometheus Stack, Loki Stack and Grafana OnCall.
+- **Developer Plane**: Focuses on developer joy, quick feedback, and seamless development with application templates(microservices/stream/batch/BPMN) , Developer portal (Currently-Spotify Backstage) and local development experience using tilt.
+- **Administration Plane**: Provides a unoplat-cli for administration.
+- **Generative Plane**: GPT4 based assistant and Agent based intelligence for easier assistance on using and performing actions on the platform.
 Together, these planes create a robust, scalable, and developer-friendly data platform that simplifies data management, collaboration, and orchestration.
 
 The backend toolkit of UnoPlat is highly configurable, allowing organizations to choose from an extensive catalog of options to build their ideal data platform.
@@ -82,14 +82,14 @@ A preferred backend catalog configuration for UnoPlat includes:
 
 1. Compute Infrastructure: [CIVO Kubernetes](https://www.civo.com/kubernetes)
 2. IaC ToolChain: [Pulumi](https://www.pulumi.com/)
-3. Message Broker Infrastructure: [Redpanda](https://vectorized.io/redpanda/), [Apache Kafka - Strimzi Operator](https://strimzi.io/)
+3. Message Broker Infrastructure: [Redpanda](https://vectorized.io/redpanda/)
 4. Microservice Framework: [Quarkus JVM/Native](https://quarkus.io/)
 5. Serverless Framework: [Knative](https://knative.dev/)
-6. BPMN Frameworks: [Netflix Conductor](https://netflix.github.io/conductor/), [Nussknacker](https://nussknacker.io/)
+6. BPMN Frameworks: [Temporal](https://temporal.io/)
 7. Streaming & Batch Infrastructure: [Apache Flink](https://flink.apache.org/)
-8. NoSQL Storage Infrastructure: [MongoDB](https://www.mongodb.com/), [Cassandra](https://cassandra.apache.org/), [Scylla](https://www.scylladb.com/)
-9. SQL Storage Infrastructure: [PostgreSQL](https://www.postgresql.org/), [CockroachDB](https://www.cockroachlabs.com/)
-10. Observability: [Prometheus Operator/Grafana](https://github.com/prometheus-operator/prometheus-operator), [Signoz](https://signoz.io/) ([OpenTelemetry](https://opentelemetry.io/))
+8. NoSQL Storage Infrastructure: [Scylla](https://www.scylladb.com/)
+9. SQL Storage Infrastructure: [PostgreSQL](https://github.com/zalando/postgres-operator), [CockroachDB](https://www.cockroachlabs.com/)
+10. Observability: [Prometheus Operator/Grafana](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack), [Loki-Stack]https://artifacthub.io/packages/helm/grafana/loki-stack], [Signoz](https://signoz.io/) ([OpenTelemetry](https://opentelemetry.io/))
 11. Feature Engineering Infra: [Feast](https://feast.dev/)
 12. GitOps Infra: [GitHub Actions](https://github.com/features/actions)
 13. Deployment & Reconciler Infra: [FluxCD](https://fluxcd.io/)
@@ -101,7 +101,7 @@ A preferred backend catalog configuration for UnoPlat includes:
 19. Software Supply Chain Compliance: [SLSA](https://slsa.dev/)
 20. Performance Engineering: [k6](https://k6.io/)
 21. Chaos Engineering: Future (Yet to be decided)
-22. Service Mesh Infrastructure: [Istio](https://istio.io/), [Consul](https://www.consul.io/)
+22. Service Mesh Infrastructure: [Linkerd](https://linkerd.io/)
 23. User Facing Analytics - [Apache pinot](https://pinot.apache.org/)
 
 *Note: The above set of open source tools/frameworks is subjected to change based on market demand and community feedback.*
