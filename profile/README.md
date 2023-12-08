@@ -106,6 +106,7 @@ A preferred backend catalog configuration for UnoPlat includes:
 24. Backup and migrate Kubernetes resources and persistent volumes - [Velero](https://velero.io/)
 25. Autoscaling Framework - [KEDA](https://keda.sh/)
 26. Private Cloud Registry with Notary for Container Images - [HARBOR](https://goharbor.io/)
+27. Self Hosted Open Source User Authentication - [Super Tokens] (https://supertokens.com/) 
 
 *Note: The above set of open source tools/frameworks is subjected to change based on market demand and community feedback.*
 
