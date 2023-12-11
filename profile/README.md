@@ -156,3 +156,9 @@ To create a domain-driven data platform for a fictional ride-hailing company usi
 3. **Ride Data Product**: Contains ride-related data such as ride requests, ride status, ride duration, distance, and payments. This data product can be used for ride pattern analysis, demand forecasting, and revenue optimization.
 4. **Pricing Data Product**: Contains pricing-related data such as dynamic pricing, promotions, and discounts. This data product can be used for pricing strategy, revenue management, and promotional analysis.
 5. **Location Data Product**: Contains location-related data such as driver and customer geolocation, route optimization, and traffic data. This data product can be used for route optimization, location-based marketing, and traffic pattern analysis.
+
+
+## Unoplat Capability Timeline
+
+
+![UnoplatCapabilityTimeline](https://github.com/unoplat/.github/assets/24807277/0214c369-6f6c-457e-8804-aba09774c62d)
