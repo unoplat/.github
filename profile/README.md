@@ -59,6 +59,12 @@ UnoPlat simplifies the creation and management of a DataMesh, decentralizing and
 ### Knowledge Engineering
 UnoPlat's Knowledge Engineering involves integrating domain expertise and data into the platform, thereby enhancing its capabilities for informed decision-making and process automation. Simultaneously, UnoPlat is dedicated to creating a comprehensive knowledge base of code, which aids in the auto-generation of code in future projects, streamlining development and aligning with industry-specific standards and practices for more efficient and innovative software creation.
 
+- Adavnced RAG based LLM Templates
+- LLM Observability
+- Instruction tuned Language Models
+- Unoplat Chat Interface API
+- LLM Benchmarking
+
 ### Supercharged Application Templates
 The heart of UnoPlat, these templates are designed as foundational building blocks for SaaS creation, enabling users to easily assemble and customize their applications with minimal coding. This feature addresses the common hurdles in SaaS development such as knowledge gaps, lifecycle complexity, and engineering challenges, allowing innovators to focus on their core ideas. By simplifying and accelerating the development process, these templates greatly enhance the probability of success and significantly reduce time to value for SaaS ventures
 
