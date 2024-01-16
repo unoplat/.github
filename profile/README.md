@@ -20,7 +20,6 @@ UnoPlat's Platform as a Service (PaaS) offering integrates advanced tools for de
 
 - Container Registry 
 - Admission Controller
-- Admission Controller
 - Container Image Signing
 - Policy Engine
 - Continuous Compliance
