@@ -1,7 +1,5 @@
 # Unoplat
 
-![Screenshot 2025-02-10 at 11 19 32 AM](https://github.com/user-attachments/assets/f1daf06c-6619-4e4b-8445-49807bb85293)
-
 # Our First Product - Unoplat Code Confluence
 
 ## The Coding Journey 
